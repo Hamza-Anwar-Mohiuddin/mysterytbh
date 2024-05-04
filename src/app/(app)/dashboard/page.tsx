@@ -184,7 +184,7 @@ function UserDashboard() {
       <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-6">
         {messages.length > 0 ? (
           messages.map((message, index) => (
-            <MessageCard message={message} onMessageDelete={handleDeleteMessage}/>
+            <MessageCard key={index} message={message} onMessageDelete={handleDeleteMessage}/>
           ))
         ) : (
           <p>No messages to display.</p>
