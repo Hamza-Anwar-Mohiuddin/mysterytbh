@@ -23,8 +23,7 @@ import { ApiResponse } from "@/types/ApiResponse";
 import { Loader2 } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Separator } from "@radix-ui/react-separator";
-import { useCompletion } from "ai/react"
-import { Message } from "@/model/user.model";
+
 
 const specialChar = '||';
 
@@ -34,7 +33,7 @@ const MessagesArray = initialMessageString.split(specialChar)
 
 
 
-const page = () => {
+const Page = () => {
   const [isLoading, setIsLoading] = useState(false);
   const params = useParams<{ username: string }>();
   const {username} = params
@@ -157,4 +156,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
