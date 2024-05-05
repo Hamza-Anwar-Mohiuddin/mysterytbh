@@ -76,8 +76,8 @@ export default function SignUpForm() {
         title: 'Success',
         description: response.data.message,
       });
-
-      router.replace(`/verify/${username}`);
+      // router.replace(`/verify/${username}`);
+      router.replace(`/signin`);
 
       setIsSubmitting(false);
     } catch (error) {
